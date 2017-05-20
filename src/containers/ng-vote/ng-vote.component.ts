@@ -52,6 +52,8 @@ export class NgVoteComponent implements OnInit, OnChanges, AfterContentInit, OnD
         this.selectedVote = Object.keys(voteTypes).map((key) => voteTypes[key])
                                 .includes(this.selectedVote) 
                                     ? this.selectedVote : this.voteTypes.none;
+
+        this.config = Object.assign({}, defaultVoteConfig, this.config);
     }
 
     ngOnChanges(changes) {
