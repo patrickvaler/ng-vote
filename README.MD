@@ -1,8 +1,10 @@
-[![Build Status](https://travis-ci.org/patrickvaler/ng-vote.svg?branch=master)](https://travis-ci.org/patrickvaler/ng-vote) [![Dependency Status](https://david-dm.org/patrickvaler/ng-vote/status.svg?style=flat)](https://david-dm.org/patrickvaler/ng-vote) [![npm version](https://badge.fury.io/js/ng-vote.svg)](http://badge.fury.io/js/ng-vote)
+[![npm version](https://badge.fury.io/js/ng-vote.svg)](http://badge.fury.io/js/ng-vote) [![Build Status](https://travis-ci.org/patrickvaler/ng-vote.svg?branch=master)](https://travis-ci.org/patrickvaler/ng-vote) [![Dependency Status](https://david-dm.org/patrickvaler/ng-vote/status.svg?style=flat)](https://david-dm.org/patrickvaler/ng-vote)
 
-# ng-vote
 
-Simple & lightweight Angular 2 vote component. 
+ng-vote
+=======
+
+Simple & lightweight Angular 2 vote component. Demo is available on [Plunker][plunkerDemo].
 
 ![ng-vote demo][demo]
 
@@ -78,34 +80,40 @@ export class AppComponent {
     <!-- Add Down Vote Button -->
     <ng-vote-down>Down</ng-vote-down>
 </ng-vote> 
+
+<!-- Minimal setup would be -->
+<ng-vote (vote)="onVote($event)">
+    <ng-vote-up>Up</ng-vote-up>
+    <ng-vote-down>Down</ng-vote-down>
+</ng-vote>
 ```
 
 ## Bindings
-### ng-vote component
+### ng-vote
+#### @Input
 
-`<ng-vote>`
-```typescript
+* **[totalVotes]**: number `Default: 0`
+* **[selectedVote]**: number `Default: 0`
+_One of -1 (downVote), 0 (not voted), 1 (upVote)_
+* **[config]**: Object
+    * **allowEdit**: boolean `Default: true`
+        _Defines if user is allowed to change his the selection._
+    * **disabled**: boolean `Default: false`
+        _Disables vote functionality._
+    * **cssClass**: string `Default: ''`
+        _Sets custom css class to override styles._
+        
+        
+#### @Output
+* **(vote)**: Object
+    * **selectedVote**: number
+    * **totalVotes**: number
 
-  // Input
-  totalVotes: number
-  selectedVote: number // one of -1 (downVote), 0 (not voted), 1 (upVote)
-  config: { 
-    allowEdit: boolean, // defines if user is allowed to change selection
-    disabled: boolean // disables vote functionality
-    cssClass: string // Sets custom css class to override styles
-
-  }
-  
-  // Output
-  (vote): { 
-    selectedVote:number, 
-    totalVotes:number 
-  }
-   
-```
-
-### ng-vote-up / ng-vote-down component
+### ng-vote-up / ng-vote-down
 No bindings available for `<ng-vote-up>` / `<ng-vote-down>`. Content will be projected to the `<button>`.
+
+## Demo
+Demo is available on [Plunker][plunkerDemo].
 
 ## License
 
@@ -122,5 +130,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ---
 Made with ♥ by [Patrick Valer]("http://www.patrickvaler.ch") (<hello@patrickvaler.ch>)
 
-
+[plunkerDemo]: https://plnkr.co/edit/Gz4LszNzdUfWYe1bLoGA?p=preview "ng-vote demo on Plunker"
 [demo]: https://image.ibb.co/niY4kv/ng_vote_demo.gif "ng-vote demo"
