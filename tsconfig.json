@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "types": []
+  }
+}

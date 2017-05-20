@@ -1,0 +1,21 @@
+.ng-vote-btn {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 10px;
+  text-align: center;
+  outline: 0;
+  color: #fff;
+  background: #1565c0;
+}
+
+.ng-vote-btn--selected {
+  opacity: .75;
+}
+
+.ng-vote-btn--disabled {
+  cursor: not-allowed;
+  background: #757575;
+}

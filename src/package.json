@@ -1,0 +1,26 @@
+{
+  "name": "ng-vote",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/patrickvaler/ng-vote"
+  },
+  "author": {
+    "name": "Patrick Valer",
+    "email": "hello@patrickvaler.ch"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "http://github.com/patrickvaler/ng-vote/issues"
+  },
+  "module": "ng-vote.js",
+  "typings": "ng-vote.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

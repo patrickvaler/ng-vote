@@ -1,0 +1,17 @@
+.ng-vote-count {
+  font-size: 3.5rem;
+  font-weight: 500;
+  padding: 0 .5rem;
+}
+
+.ng-vote-count--positive {
+  color: #1b5e20;
+}
+
+.ng-vote-count--negative {
+  color: #b71c1c;
+}
+
+.ng-vote-count--neutral {
+  color: #757575;
+}
