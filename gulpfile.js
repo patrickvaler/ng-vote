@@ -5,8 +5,10 @@ var gulp = require('gulp'),
     rollup = require('gulp-rollup'),
     del = require('del'),
     runSequence = require('run-sequence'),
-    inlineResources = require('./tools/gulp/inline-resources');
+    inlineResources = require('./tools/gulp/inline-resources'),
+    jeditor = require("gulp-json-editor");
 
+const rootPackageVersion = require('./package.json').version;
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src');
 const tmpFolder = path.join(rootFolder, '.tmp');
@@ -87,13 +89,15 @@ gulp.task('copy:build', function () {
 });
 
 /**
- * 7. Copy package.json from /src to /dist
+ * 7. Copy package.json from /src to /dist and add rootPackage version
  */
 gulp.task('copy:manifest', function () {
     return gulp.src([`${srcFolder}/package.json`])
+        .pipe(jeditor({
+            'version': rootPackageVersion
+        }))
         .pipe(gulp.dest(distFolder));
 });
-
 
 /**
  * 8. Copy README.md from / to /dist
