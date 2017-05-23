@@ -4,7 +4,14 @@ module.exports = function (config) {
     config.set({
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome'],
+        browsers: !process.env.TRAVIS ? ['Chrome'] : ['Chrome_travis_ci'],
+
+        customLaunchers: {
+            Chrome_travis_ci: {
+                base: 'Chrome',
+                flags: ['--no-sandbox']
+            }
+        },
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
