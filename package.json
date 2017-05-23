@@ -19,9 +19,7 @@
     "name": "Patrick Valer",
     "email": "hello@patrickvaler.ch"
   },
-  "keywords": [
-    "angular"
-  ],
+  "keywords": ["angular", "ng-vote", "ngVote"],
   "license": "MIT",
   "bugs": {
     "url": "http://github.com/patrickvaler/ng-vote/issues"
