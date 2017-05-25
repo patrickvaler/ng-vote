@@ -1,10 +1,10 @@
 import {Component, Output, EventEmitter, ElementRef} from '@angular/core';
-import {voteTypes} from '../../containers/ng-vote/ng-vote.component';
+import {INgVoteBtnState} from '../../models/ng-vote-btn-state.interface';
 
-export interface INgVoteCountState {
-    selected: boolean,
-    disabled: boolean
-}
+export const ngVoteBtnDefaultState:INgVoteBtnState = {
+    selected: false,
+    disabled: false
+};
 
 @Component({
     selector: 'ng-vote-up, ng-vote-down',
@@ -24,10 +24,7 @@ export interface INgVoteCountState {
 })
 export class NgVoteBtnComponent {
     selector:string;
-    state:INgVoteCountState = {
-        selected: false,
-        disabled: false
-    };
+    state:INgVoteBtnState = ngVoteBtnDefaultState;
 
     @Output()
     voted = new EventEmitter();
@@ -36,7 +33,7 @@ export class NgVoteBtnComponent {
         this.selector = ref.nativeElement.tagName.toLowerCase();
     }
 
-    setState(state:INgVoteCountState) {
+    setState(state:INgVoteBtnState) {
         this.state = Object.assign({}, this.state, state);
     }
 

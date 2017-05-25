@@ -12,7 +12,7 @@ export const voteTypes:INgVoteTypes = {
 
 const voteTypesList:string[] =  Object.keys(voteTypes).map((key) => voteTypes[key]);
 
-const defaultVoteConfig:INgVoteConfig = {
+export const ngVoteDefaultConfig:INgVoteConfig = {
     allowEdit: true,
     disabled: false,
     cssClass: '' 
@@ -53,12 +53,12 @@ export class NgVoteComponent implements OnInit, OnChanges, AfterContentInit, OnD
                                 .includes(this.selectedVote) 
                                     ? this.selectedVote : this.voteTypes.none;
 
-        this.config = Object.assign({}, defaultVoteConfig, this.config);
+        this.config = Object.assign({}, ngVoteDefaultConfig, this.config);
     }
 
     ngOnChanges(changes) {
         if (changes.config) {
-            this.config = Object.assign({}, defaultVoteConfig, this.config, changes.config.currentValue);
+            this.config = Object.assign({}, ngVoteDefaultConfig, this.config, changes.config.currentValue);
         }
 
         if (changes.totalVotes) {
