@@ -4,7 +4,7 @@
 ng-vote
 =======
 
-Simple & lightweight Angular 2 vote component. Demo is available on [Plunker][plunkerDemo].
+Simple & lightweight Angular 2/4 voting component. Demo is available on [Plunker][plunkerDemo].
 
 ![ng-vote demo][demo]
 
@@ -113,7 +113,7 @@ _One of -1 (downVote), 0 (not voted), 1 (upVote)_
 No bindings available for `<ng-vote-up>` / `<ng-vote-down>`. Content will be projected to the `<button>`.
 
 ## Demo
-Demo is available on [Plunker][plunkerDemo].
+Demo of the Angular 2/4 voting component is available on [Plunker][plunkerDemo].
 
 ## License
 
@@ -128,7 +128,8 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
-Made with ♥ by [Patrick Valer]("http://www.patrickvaler.ch") (<hello@patrickvaler.ch>)
+Made with ♥ by [Patrick Valer][patrickvalerCh] (<hello@patrickvaler.ch>)
 
+[patrickvalerCh]: https://www.patrickvaler.ch "patrickvaler.ch"
 [plunkerDemo]: https://plnkr.co/edit/Gz4LszNzdUfWYe1bLoGA?p=preview "ng-vote demo on Plunker"
 [demo]: https://image.ibb.co/niY4kv/ng_vote_demo.gif "ng-vote demo"
