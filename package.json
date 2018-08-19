@@ -1,6 +1,6 @@
 {
   "name": "ng-vote",
-  "version": "0.1.5",
+  "version": "0.0.0-development",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -9,11 +9,13 @@
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
-    "test": "karma start"
+    "test": "karma start",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/patrickvaler/ng-vote"
+    "url": "https://github.com/patrickvaler/ng-vote"
   },
   "author": {
     "name": "Patrick Valer",
@@ -63,7 +65,9 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
-    "zone.js": "^0.8.17"
+    "zone.js": "^0.8.17",
+    "travis-deploy-once": "^5.0.2",
+    "semantic-release": "^15.9.9"
   },
   "engines": {
     "node": ">=6.0.0"
